@@ -6,7 +6,7 @@
 #    By: esafar <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/09 13:16:20 by esafar            #+#    #+#              #
-#    Updated: 2022/01/09 17:38:20 by esafar           ###   ########.fr        #
+#    Updated: 2022/01/09 21:21:46 by esafar           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,8 @@ NAME = libunit.a
 
 RADIX = launch_tests load_test clean_list pipe
 DIR = ./
-SRC = $(addprefix $(DIR), $(addsuffix .c, $(RADIX)))
+# SRC = $(addprefix $(DIR), $(addsuffix .c, $(RADIX)))
+SRC = load_test.c launch_tests.c clean_list.c pipe.c 
 OBJ = $(addprefix $(DIR), $(addsuffix .o, $(RADIX)))
 HDR = $(addprefix $(DIR), libunit.h)
 
@@ -30,7 +31,7 @@ SRC_LIB = ./utils/srcs/ft_putstr_fd.c \
 
 OBJ_LIB = ${SRC_LIB:.c=.o}
 
-CC = gcc
+CC = cc
 CFLAGS = -Wall -Wextra -Werror
 
 RED                             =       \033[0;31m
@@ -43,11 +44,8 @@ $(NAME) : $(OBJ) ${OBJ_LIB}
 		@echo "$(GREEN)Objects created.$(NC)"
 		@ar rcs ${NAME} ${OBJ} ${OBJ_LIB}
 		@echo "$(GREEN)Program created.$(NC)"
-		@mv ${NAME} ../.
+		mv libunit.a ../.
 		@echo "$(GREEN)Executable moved to root.$(NC)"
-
-$(DIR)%.o : $(DIR)%.c $(HDR)
-		@$(CC) $(CFLAGS) -c $< -I $(DIR) -o $@
 
 clean :
 		@rm -f $(OBJ)

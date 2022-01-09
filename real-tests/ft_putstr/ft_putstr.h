@@ -18,5 +18,6 @@
 int	ft_putstr(const char *str);
 int	ft_putstr_launcher(void);
 int	basic_putstr_test(void);
+int	null_test(void);
 
 #endif

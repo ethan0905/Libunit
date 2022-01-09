@@ -32,4 +32,3 @@ void	clean_list(t_test **ptr)
 	}
 	ptr = NULL;
 }
-

@@ -6,7 +6,7 @@
 #    By: esafar <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/09 12:07:43 by esafar            #+#    #+#              #
-#    Updated: 2022/01/09 13:45:29 by esafar           ###   ########.fr        #
+#    Updated: 2022/01/09 21:14:09 by esafar           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,9 +14,10 @@ NAME                    =       exec
 
 FW_FOLDER               =       ..
 FRAMEWORKLIB    =       -L$(FW_FOLDER) -lunit
-FRAMEWORK               =       $(FW_FOLDER)/libunit.a
+# FRAMEWORK               =       $(FW_FOLDER)/libunit.a
+FRAMEWORK               =       ../libunit.a
 
-CC                              =       gcc
+CC                              =       cc
 CFLAGS                  +=      -Wall -Werror -Wextra
 RM                              =       /bin/rm
 RMFLAGS                 +=      -rf
@@ -36,6 +37,7 @@ SRCS                    =       main.c \
 								./ft_atoi/11_multiple_zero_test.c \
 								./ft_putstr/00_ft_putstr_launcher.c \
 								./ft_putstr/01_basic_putstr_test.c \
+								./ft_putstr/02_null_test.c \
 
 SRCS                    +=      ../function_to_test/ft_atoi.c \
 								../function_to_test/ft_putstr.c
