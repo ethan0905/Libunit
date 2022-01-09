@@ -12,17 +12,17 @@
 
 #include "../framework/utils/includes/libft.h"
 
-char    *ft_strcpy(char *dest, const char *src)
+char	*ft_strcpy(char *dest, const char *src)
 {
-    int i;
+	int	i;
 
-    i = 0;
-    dest =(char *)malloc(sizeof(char) * (ft_strlen(src) + 1));
-    while (src[i])
-    {
-        dest[i] = src[i];
-        i++;
-    }
-    dest[i] = '\0';
-    return (dest);
+	i = 0;
+	dest = (char *)malloc(sizeof(char) * (ft_strlen(src) + 1));
+	while (src[i])
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	dest[i] = '\0';
+	return (dest);
 }
