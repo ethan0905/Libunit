@@ -10,7 +10,7 @@
 #                                                                              #
 # **************************************************************************** #
 
-NAME                    =       unit_test
+NAME                    =       exec
 
 FW_FOLDER               =       ..
 FRAMEWORKLIB    =       -L$(FW_FOLDER) -lunit
