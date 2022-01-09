@@ -35,5 +35,3 @@ int	ft_atoi_launcher(void)
 	clean_list(&lst);
 	return (ret);
 }
-
-

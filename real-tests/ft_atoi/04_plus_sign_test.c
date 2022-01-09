@@ -19,4 +19,3 @@ int	plus_sign_test(void)
 	else
 		return (-1);
 }
-

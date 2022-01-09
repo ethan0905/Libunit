@@ -19,4 +19,3 @@ int	zero_test(void)
 	else
 		return (-1);
 }
-

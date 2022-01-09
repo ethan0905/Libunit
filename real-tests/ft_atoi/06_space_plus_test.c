@@ -19,4 +19,3 @@ int	space_plus_test(void)
 	else
 		return (-1);
 }
-

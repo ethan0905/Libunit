@@ -19,4 +19,3 @@ int	zero_before_neg_num_test(void)
 	else
 		return (-1);
 }
-

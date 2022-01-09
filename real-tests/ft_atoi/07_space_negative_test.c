@@ -19,4 +19,3 @@ int	space_negative_test(void)
 	else
 		return (-1);
 }
-

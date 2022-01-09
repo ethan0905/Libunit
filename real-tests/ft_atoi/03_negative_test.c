@@ -19,4 +19,3 @@ int	negative_test(void)
 	else
 		return (-1);
 }
-
