@@ -31,6 +31,7 @@ int	ft_atoi_launcher(void)
 	load_test(&lst, "zero_before_neg_num_test", &zero_before_neg_num_test);
 	load_test(&lst, "multiple_zero_test", &multiple_zero_test);
 	ret = launch_tests(&lst);
+	ft_putstr_fd("====================>\n", 1);
 	clean_list(&lst);
 	return (ret);
 }

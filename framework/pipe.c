@@ -12,6 +12,11 @@
 
 #include "libunit.h"
 
+/*
+	copy the stdout fd into a variable, then use the (int *)pipefd to
+	store the writing entry into the pipe;
+*/
+
 int		stdout_to_pipe(int *fd_pipe)
 {
 	int		stdout_copy;
@@ -34,4 +39,3 @@ char	*get_pipe_buffer(int stdout_copy, int *fd_pipe, char *buff, size_t size)
 	close(fd_pipe[0]);
 	return (buff);
 }
-

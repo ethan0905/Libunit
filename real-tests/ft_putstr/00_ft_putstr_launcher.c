@@ -1,22 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   00_ft_putstr_launcher.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: esafar <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/09 13:45:37 by esafar            #+#    #+#             */
-/*   Updated: 2022/01/09 19:47:14 by esafar           ###   ########.fr       */
+/*   Created: 2022/01/09 19:22:01 by esafar            #+#    #+#             */
+/*   Updated: 2022/01/09 19:22:59 by esafar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../framework/libunit.h"
-#include "./ft_atoi/ft_atoi.h"
-#include "./ft_putstr/ft_putstr.h"
+#include "ft_putstr.h"
 
-int	main(void)
+int	ft_putstr_launcher(void)
 {
-	ft_atoi_launcher();
-	ft_putstr_launcher();
-	return (0);
+	int		ret;
+	t_test	*lst;
+
+	lst = NULL;
+	ft_putstr_fd("ft_putstr:\n", 1);
+	load_test(&lst, "basic_putstr_test", &basic_putstr_test);
+	// load_test(&lst, "null_test", &null_test);
+	ret = launch_tests(&lst);
+	ft_putstr_fd("====================>\n", 1);
+	clean_list(&lst);
+	return (ret);
 }

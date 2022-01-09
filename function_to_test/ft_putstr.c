@@ -1,22 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: esafar <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/09 13:45:37 by esafar            #+#    #+#             */
-/*   Updated: 2022/01/09 19:47:14 by esafar           ###   ########.fr       */
+/*   Created: 2022/01/09 19:41:17 by esafar            #+#    #+#             */
+/*   Updated: 2022/01/09 20:29:20 by esafar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../framework/libunit.h"
-#include "./ft_atoi/ft_atoi.h"
-#include "./ft_putstr/ft_putstr.h"
+#include <unistd.h>
 
-int	main(void)
+void	ft_putstr(char *str)
 {
-	ft_atoi_launcher();
-	ft_putstr_launcher();
-	return (0);
+    int i;
+
+    i = 0;
+    while (str[i])
+    {
+	write(1, &str[i], 1);
+	i++;
+    }
 }

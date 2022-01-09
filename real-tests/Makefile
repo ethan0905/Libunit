@@ -34,9 +34,11 @@ SRCS                    =       main.c \
 								./ft_atoi/09_zero_before_num_test.c \
 								./ft_atoi/10_zero_before_neg_num_test.c \
 								./ft_atoi/11_multiple_zero_test.c \
+								./ft_putstr/00_ft_putstr_launcher.c \
+								./ft_putstr/01_basic_putstr_test.c \
 
-
-SRCS                    +=      ../function_to_test/ft_atoi.c
+SRCS                    +=      ../function_to_test/ft_atoi.c \
+								../function_to_test/ft_putstr.c
 
 OBJS                    =       $(notdir $(SRCS:.c=.o))
 

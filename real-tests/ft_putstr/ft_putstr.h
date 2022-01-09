@@ -1,32 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.h                                          :+:      :+:    :+:   */
+/*   ft_putstr.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: esafar <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/09 13:54:45 by esafar            #+#    #+#             */
-/*   Updated: 2022/01/09 14:24:31 by esafar           ###   ########.fr       */
+/*   Created: 2022/01/09 19:23:48 by esafar            #+#    #+#             */
+/*   Updated: 2022/01/09 19:23:51 by esafar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_ATOI_H
-# define FT_ATOI_H
+#ifndef FT_PUTSTR_H
+# define FT_PUTSTR_H
 
 # include "../../framework/libunit.h"
 
-int	ft_atoi(const char *str);
-int	ft_atoi_launcher(void);
-int	basic_atoi_test(void);
-int	zero_test(void);
-int	negative_test(void);
-int	plus_sign_test(void);
-int	space_test(void);
-int	space_plus_test(void);
-int	space_negative_test(void);
-int	word_after_test(void);
-int	zero_before_num_test(void);
-int	zero_before_neg_num_test(void);
-int	multiple_zero_test(void);
+int	ft_putstr(const char *str);
+int	ft_putstr_launcher(void);
+int	basic_putstr_test(void);
 
 #endif

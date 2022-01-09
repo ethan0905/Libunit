@@ -41,7 +41,7 @@ void	ft_putstr_fd(char const *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 size_t	ft_strlen(const char *s);
 int		ft_strequ(char const *s1, char const *s2);
-
+int		ft_strcmp(char *s1, char *s2);
 void	ft_bzero(void *s, size_t n);
 void	*ft_memset(void *b, int c, size_t len);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);

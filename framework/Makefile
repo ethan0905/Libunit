@@ -26,6 +26,7 @@ SRC_LIB = ./utils/srcs/ft_putstr_fd.c \
 		./utils/srcs/ft_memset.c \
 		./utils/srcs/ft_memcmp.c \
 		./utils/srcs/ft_strequ.c \
+		./utils/srcs/ft_strcmp.c \
 
 OBJ_LIB = ${SRC_LIB:.c=.o}
 

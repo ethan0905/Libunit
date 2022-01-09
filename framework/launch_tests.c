@@ -94,7 +94,7 @@ int			launch_tests(t_test **tests)
 			parent_process((*tests)->name, &grade);
 		*tests = (*tests)->next;
 		total_point++;
-		usleep(800000);
+		// usleep(800000);
 	}
 	ft_putstr_fd("\n", 1);
 	ft_putnbr_fd(grade, 1);
