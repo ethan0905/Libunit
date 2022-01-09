@@ -6,7 +6,7 @@
 #    By: esafar <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/09 13:16:20 by esafar            #+#    #+#              #
-#    Updated: 2022/01/09 21:21:46 by esafar           ###   ########.fr        #
+#    Updated: 2022/01/09 22:00:22 by esafar           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -48,7 +48,7 @@ $(NAME) : $(OBJ) ${OBJ_LIB}
 		@echo "$(GREEN)Executable moved to root.$(NC)"
 
 clean :
-		@rm -f $(OBJ)
+		@rm -f $(OBJ) $(OBJ_LIB)
 		@echo "$(RED)Objects deleted.$(NC)"
 
 fclean : clean

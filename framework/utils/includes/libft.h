@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   libft.h                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: esafar <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/01/09 22:04:35 by esafar            #+#    #+#             */
+/*   Updated: 2022/01/09 22:04:36 by esafar           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef LIBFT_H
 # define LIBFT_H
 
@@ -11,26 +23,26 @@
 
 # define BUFF_SIZE 15
 
-typedef struct		s_str
+typedef struct s_str
 {
 	char			*addr;
 	size_t			len;
 }					t_str;
 
-typedef struct		s_list
+typedef struct s_list
 {
 	void			*content;
 	size_t			content_size;
 	struct s_list	*next;
 }					t_list;
 
-typedef struct		s_buffer
+typedef struct s_buffer
 {
 	int				fildes;
 	char			buf[BUFF_SIZE + 1];
 }					t_buffer;
 
-typedef struct		s_wslen
+typedef struct s_wslen
 {
 	ssize_t			count;
 	ssize_t			bytes;
@@ -47,4 +59,3 @@ void	*ft_memset(void *b, int c, size_t len);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 
 #endif
-
