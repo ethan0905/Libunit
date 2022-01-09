@@ -6,3 +6,4 @@
 make: Warning: File 'ft_strcpy.o' has modification time 0.0087 s in the future  
 make: warning:  Clock skew detected.  Your build may be incomplete.  
 ```
+- ajouter des routines, de manieres a avoir 15 tests (chiffre a verifier)
