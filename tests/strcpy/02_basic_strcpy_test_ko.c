@@ -12,7 +12,7 @@
 
 #include "basic_strcpy_tests.h"
 
-int		basic_strcpy_test_ko(void)
+int	basic_strcpy_test_ko(void)
 {
 	char	s1[10];
 	char	*s2;
@@ -24,4 +24,3 @@ int		basic_strcpy_test_ko(void)
 	else
 		return (1);
 }
-

@@ -12,7 +12,7 @@
 
 #include "basic_strcpy_tests.h"
 
-int					basic_strcpy_launcher(void)
+int	basic_strcpy_launcher(void)
 {
 	int		ret;
 	t_test	*lst;

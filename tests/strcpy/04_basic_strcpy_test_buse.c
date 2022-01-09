@@ -12,7 +12,7 @@
 
 #include "basic_strcpy_tests.h"
 
-int		basic_strcpy_test_buse(void)
+int	basic_strcpy_test_buse(void)
 {
 	char	*s1;
 	char	*s2;

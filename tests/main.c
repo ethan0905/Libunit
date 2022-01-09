@@ -13,7 +13,7 @@
 #include "../framework/libunit.h"
 #include "./strcpy/basic_strcpy_tests.h"
 
-int			main(void)
+int	main(void)
 {
 	basic_strcpy_launcher();
 	return (0);
