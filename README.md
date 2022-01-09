@@ -1,3 +1,3 @@
 # Libunit
-## Error to fixe !!
-in framework: le makefile relink  
+## Erreurs a fixer !!
+dans le dossier framework: le makefile relink  
