@@ -14,7 +14,7 @@
 
 int					basic_strcpy_launcher(void)
 {
-	t_unit_test	*lst;
+	t_test	*lst;
 	int			ret;
 
 	ft_putstr_fd("ft_strcpy:\n", 1);

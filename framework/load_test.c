@@ -12,11 +12,16 @@
 
 #include "libunit.h"
 
-t_unit_test	*new_test(char *name, int (*test)(void))
-{
-	t_unit_test	*list;
+/*
+        new_test function malloc a t_test sized node, and is initiated with datas of the test
+        concerned;
+*/
 
-	if (!(list = (t_unit_test *)malloc(sizeof(t_unit_test))))
+t_test	*new_test(char *name, int (*test)(void))
+{
+	t_test	*list;
+
+	if (!(list = (t_test *)malloc(sizeof(t_test))))
 		return (NULL);
 	list->name = name;
 	list->test = test;
@@ -24,9 +29,15 @@ t_unit_test	*new_test(char *name, int (*test)(void))
 	return (list);
 }
 
-void		load_test(t_unit_test **testlist, char *name, int (*test)(void))
+/*
+        load_test function creates a chained list of all tests to do (ft_atoi tests for example),
+        where every node stores the test name,the funtion address to refer to, and a pointer to
+        the next node;
+*/
+
+void		load_test(t_test **testlist, char *name, int (*test)(void))
 {
-	t_unit_test	*tmp;
+	t_test	*tmp;
 
 	if (*testlist == NULL)
 		*testlist = new_test(name, test);

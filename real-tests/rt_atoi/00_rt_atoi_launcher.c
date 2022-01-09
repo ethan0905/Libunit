@@ -14,7 +14,7 @@
 
 int	rt_atoi_launcher(void)
 {
-	t_unit_test	*lst;
+	t_test	*lst;
 	int			ret;
 
 	ft_putstr_fd("ft_atoi:\n", 1);

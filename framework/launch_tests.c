@@ -37,7 +37,7 @@ static void	kill_child(int sig)
 	exit(SIGALRM);
 }
 
-static void	child_process(t_unit_test **tests)
+static void	child_process(t_test **tests)
 {
 	signal(SIGALRM, kill_child);
 	alarm(TIMEOUT_SECONDS);
@@ -58,7 +58,15 @@ static void	parent_process(char *name, int *point)
 	ft_putstr_fd("]\n", 1);
 }
 
-int			launch_tests(t_unit_test **tests)
+/*
+        after loading all tests in a chained list, launch_test function is called,
+        executing the tests.
+        in order to test correctly everything, including segfaults and buserror,
+        tests are executed in a child process. thereby, the default process will
+        continue running until the completing all tests.
+*/
+
+int			launch_tests(t_test **tests)
 {
 	int		point;
 	int		full_point;

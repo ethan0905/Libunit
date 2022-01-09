@@ -12,9 +12,9 @@
 
 #include "libunit.h"
 
-void	clean_list(t_unit_test **ptr)
+void	clean_list(t_test **ptr)
 {
-	t_unit_test	*buf[2];
+	t_test	*buf[2];
 
 	if (!ptr)
 		return ;
