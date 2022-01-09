@@ -14,11 +14,11 @@
 
 int	ft_atoi_launcher(void)
 {
+	int		ret;
 	t_test	*lst;
-	int			ret;
 
-	ft_putstr_fd("ft_atoi:\n", 1);
 	lst = NULL;
+	ft_putstr_fd("ft_atoi:\n", 1);
 	load_test(&lst, "basic_atoi_test", &basic_atoi_test);
 	load_test(&lst, "zero_test", &zero_test);
 	load_test(&lst, "negative_test", &negative_test);
