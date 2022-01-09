@@ -10,8 +10,6 @@
 #                                                                              #
 # **************************************************************************** #
 
-.PHONY: all re clean fclean
-
 NAME = libunit.a
 
 RADIX = launch_tests load_test clean_list pipe
@@ -51,3 +49,4 @@ fclean : clean
 
 re : fclean all
 
+.PHONY: all re clean fclean

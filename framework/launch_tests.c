@@ -55,7 +55,7 @@ static void	child_process(t_test **tests)
 
 static void	parent_process(char *name, int *grade)
 {
-	int		status;
+	int	status;
 
 	status = 0;
 	wait(&status);
