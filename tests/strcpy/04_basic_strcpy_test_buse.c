@@ -17,11 +17,10 @@ int		basic_strcpy_test_buse(void)
 	char	*s1;
 	char	*s2;
 
-	s1 = "AI";
-	s2 = "Hello";
-	if (test_strcpy(s1, s2))
+	s1 = "AA";
+	s2 = "Hello World!";
+	if (ft_strcpy(s1, s2))
 		return (0);
 	else
 		return (-1);
 }
-

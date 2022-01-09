@@ -6,7 +6,7 @@
 /*   By: esafar <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/09 13:40:05 by esafar            #+#    #+#             */
-/*   Updated: 2022/01/09 14:02:14 by esafar           ###   ########.fr       */
+/*   Updated: 2022/01/09 15:44:20 by esafar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ int		basic_strcpy_test_ko(void);
 int		basic_strcpy_test_segv(void);
 int		basic_strcpy_test_buse(void);
 
-char	*test_strcpy(char *dst, const char *src);
+//char	*test_strcpy(char *dst, const char *src);
+char	*ft_strcpy(char *dest, const char *src);
 
 #endif

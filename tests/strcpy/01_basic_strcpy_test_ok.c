@@ -18,8 +18,8 @@ int		basic_strcpy_test_ok(void)
 	char	*s2;
 
 	ft_bzero(s1, 10);
-	s2 = "Hello";
-	if (ft_strequ(test_strcpy(s1, s2), "Hello"))
+	s2 = "Hello World!";
+	if (ft_strequ(ft_strcpy(s1, s2), "Hello World!"))
 		return (0);
 	else
 		return (-1);
