@@ -41,17 +41,26 @@ static void	child_process(t_test **tests)
 {
 	signal(SIGALRM, kill_child);
 	alarm(TIMEOUT_SECONDS);
-	exit(((*tests)->test)() == 0 ? 0 : 1);
+	if (((*tests)->test)() == 0)
+		exit(0);
+	else
+		exit(1);
 }
 
-static void	parent_process(char *name, int *point)
+/*
+	parent_process wait for the child process to finish, and when WIFEXISTED(status)
+	return "true" AND WEXITSTATUS(status) return 0, that means that the child process
+	quit using exit signal, with the good exit code (0);
+*/
+
+static void	parent_process(char *name, int *grade)
 {
 	int		status;
 
 	status = 0;
 	wait(&status);
 	if (WIFEXITED(status) && WEXITSTATUS(status) == 0)
-		*point += 1;
+		*grade += 1;
 	write(1, name, ft_strlen(name));
 	ft_putstr_fd(" : [", 1);
 	write(1, read_status(status), ft_strlen(read_status(status)));
@@ -68,12 +77,12 @@ static void	parent_process(char *name, int *point)
 
 int			launch_tests(t_test **tests)
 {
-	int		point;
-	int		full_point;
+	int		grade;
+	int		total_point;
 	pid_t	pid;
 
-	point = 0;
-	full_point = 0;
+	grade = 0;
+	total_point = 0;
 	while (*tests)
 	{
 		pid = fork();
@@ -82,16 +91,19 @@ int			launch_tests(t_test **tests)
 		else if (pid == 0)
 			child_process(tests);
 		else if (pid > 0)
-			parent_process((*tests)->name, &point);
+			parent_process((*tests)->name, &grade);
 		*tests = (*tests)->next;
-		full_point++;
+		total_point++;
 		usleep(800000);
 	}
 	ft_putstr_fd("\n", 1);
-	ft_putnbr_fd(point, 1);
+	ft_putnbr_fd(grade, 1);
 	ft_putstr_fd("/", 1);
-	ft_putnbr_fd(full_point, 1);
+	ft_putnbr_fd(total_point, 1);
 	ft_putstr_fd(" tests checked\n", 1);
-	return ((point == full_point) ? 0 : -1);
+	if (grade == total_point)
+		return (0);
+	else
+		return (-1);
 }
 

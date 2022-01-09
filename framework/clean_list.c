@@ -12,6 +12,11 @@
 
 #include "libunit.h"
 
+/*
+	this function clean all (char *) that has been malloced when inited,
+	from every nodes that the t_test list has;
+*/
+
 void	clean_list(t_test **ptr)
 {
 	t_test	*buf[2];
