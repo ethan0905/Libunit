@@ -12,10 +12,10 @@
 
 NAME = libunit.a
 
-RADIX = launch_tests load_test clean_list pipe
+RADIX = launch_tests load_test clean_list pipe display_message
 DIR = ./
 # SRC = $(addprefix $(DIR), $(addsuffix .c, $(RADIX)))
-SRC = load_test.c launch_tests.c clean_list.c pipe.c 
+SRC = load_test.c launch_tests.c clean_list.c pipe.c display_message.c
 OBJ = $(addprefix $(DIR), $(addsuffix .o, $(RADIX)))
 HDR = $(addprefix $(DIR), libunit.h)
 

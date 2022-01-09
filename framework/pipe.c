@@ -17,7 +17,7 @@
 	store the writing entry into the pipe;
 */
 
-int		stdout_to_pipe(int *fd_pipe)
+int	stdout_to_pipe(int *fd_pipe)
 {
 	int		stdout_copy;
 

@@ -48,8 +48,9 @@ static void	child_process(t_test **tests)
 }
 
 /*
-	parent_process wait for the child process to finish, and when WIFEXISTED(status)
-	return "true" AND WEXITSTATUS(status) return 0, that means that the child process
+	parent_process wait for the child process to finish,
+	and when WIFEXISTED(status) return "true" AND
+	WEXITSTATUS(status) return 0, that means that the child process
 	quit using exit signal, with the good exit code (0);
 */
 
@@ -68,14 +69,14 @@ static void	parent_process(char *name, int *grade)
 }
 
 /*
-        after loading all tests in a chained list, launch_test function is called,
-        executing the tests.
-        in order to test correctly everything, including segfaults and buserror,
-        tests are executed in a child process. thereby, the default process will
-        continue running until the completing all tests.
+        after loading all tests in a chained list, launch_test
+		function is called, executing the tests. in order to test
+		correctly everything, including segfaults and buserror,
+		tests are executed in a child process. thereby, the default
+		process will continue running until the completing all tests.
 */
 
-int			launch_tests(t_test **tests)
+int	launch_tests(t_test **tests)
 {
 	int		grade;
 	int		total_point;
@@ -94,16 +95,10 @@ int			launch_tests(t_test **tests)
 			parent_process((*tests)->name, &grade);
 		*tests = (*tests)->next;
 		total_point++;
-		// usleep(800000);
 	}
-	ft_putstr_fd("\n", 1);
-	ft_putnbr_fd(grade, 1);
-	ft_putstr_fd("/", 1);
-	ft_putnbr_fd(total_point, 1);
-	ft_putstr_fd(" tests checked\n", 1);
+	display_message(grade, total_point);
 	if (grade == total_point)
 		return (0);
 	else
 		return (-1);
 }
-

@@ -17,7 +17,7 @@ FRAMEWORKLIB    =       -L$(FW_FOLDER) -lunit
 FRAMEWORK               =       $(FW_FOLDER)/libunit.a
 
 CC                              =       gcc
-CFLAGS                  +=      -Wall -Werror -Wextra
+CFLAGS                  +=      -Wall -Werror -Wextra -g3
 RM                              =       /bin/rm
 RMFLAGS                 +=      -rf
 

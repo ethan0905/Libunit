@@ -34,5 +34,6 @@ void	load_test(t_test **tests, char *name, int (*test)(void));
 void	clean_list(t_test **ptr);
 int		stdout_to_pipe(int *fd_pipe);
 char	*get_pipe_buffer(int stdout_copy, int *fd_pipe, char *buff, size_t size);
+void    display_message(int grade, int total_point);
 
 #endif
