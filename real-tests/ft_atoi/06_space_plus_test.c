@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   10_zero_before_neg_num_test.c                      :+:      :+:    :+:   */
+/*   06_space_plus_test.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: esafar <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/09 13:53:24 by esafar            #+#    #+#             */
-/*   Updated: 2022/01/09 13:53:30 by esafar           ###   ########.fr       */
+/*   Created: 2022/01/09 13:50:39 by esafar            #+#    #+#             */
+/*   Updated: 2022/01/09 13:50:47 by esafar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "rt_atoi.h"
+#include "ft_atoi.h"
 
-int	zero_before_neg_num_test(void)
+int	space_plus_test(void)
 {
-	if (rt_atoi("-00123") == -123)
+	if (ft_atoi("  +123") == 123)
 		return (0);
 	else
 		return (-1);

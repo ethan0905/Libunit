@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   07_space_negative_test.c                           :+:      :+:    :+:   */
+/*   03_negative_test.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: esafar <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/09 13:51:18 by esafar            #+#    #+#             */
-/*   Updated: 2022/01/09 13:51:24 by esafar           ###   ########.fr       */
+/*   Created: 2022/01/09 13:49:06 by esafar            #+#    #+#             */
+/*   Updated: 2022/01/09 13:49:11 by esafar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "rt_atoi.h"
+#include "ft_atoi.h"
 
-int	space_negative_test(void)
+int	negative_test(void)
 {
-	if (rt_atoi("  -123") == -123)
+	if (ft_atoi("-123") == -123)
 		return (0);
 	else
 		return (-1);

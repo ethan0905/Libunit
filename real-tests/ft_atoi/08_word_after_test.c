@@ -1,22 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   06_space_plus_test.c                               :+:      :+:    :+:   */
+/*   08_word_after_test.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: esafar <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/09 13:50:39 by esafar            #+#    #+#             */
-/*   Updated: 2022/01/09 13:50:47 by esafar           ###   ########.fr       */
+/*   Created: 2022/01/09 13:51:57 by esafar            #+#    #+#             */
+/*   Updated: 2022/01/09 13:52:12 by esafar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "rt_atoi.h"
+#include "ft_atoi.h"
 
-int	space_plus_test(void)
+int	word_after_test(void)
 {
-	if (rt_atoi("  +123") == 123)
+	if (ft_atoi("123abc") == 123)
 		return (0);
 	else
 		return (-1);
 }
-

@@ -1,21 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   08_word_after_test.c                               :+:      :+:    :+:   */
+/*   10_zero_before_neg_num_test.c                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: esafar <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/09 13:51:57 by esafar            #+#    #+#             */
-/*   Updated: 2022/01/09 13:52:12 by esafar           ###   ########.fr       */
+/*   Created: 2022/01/09 13:53:24 by esafar            #+#    #+#             */
+/*   Updated: 2022/01/09 13:53:30 by esafar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "rt_atoi.h"
+#include "ft_atoi.h"
 
-int	word_after_test(void)
+int	zero_before_neg_num_test(void)
 {
-	if (rt_atoi("123abc") == 123)
+	if (ft_atoi("-00123") == -123)
 		return (0);
 	else
 		return (-1);
 }
+

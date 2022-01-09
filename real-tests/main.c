@@ -11,11 +11,10 @@
 /* ************************************************************************** */
 
 #include "../framework/libunit.h"
-#include "./rt_atoi/rt_atoi.h"
+#include "./ft_atoi/ft_atoi.h"
 
 int	main(void)
 {
-	rt_atoi_launcher();
+	ft_atoi_launcher();
 	return (0);
 }
-

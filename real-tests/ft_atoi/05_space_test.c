@@ -1,22 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   09_zero_before_num_test.c                          :+:      :+:    :+:   */
+/*   05_space_test.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: esafar <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/09 13:52:46 by esafar            #+#    #+#             */
-/*   Updated: 2022/01/09 13:52:54 by esafar           ###   ########.fr       */
+/*   Created: 2022/01/09 13:50:13 by esafar            #+#    #+#             */
+/*   Updated: 2022/01/09 13:50:20 by esafar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "rt_atoi.h"
+#include "ft_atoi.h"
 
-int	zero_before_num_test(void)
+int	space_test(void)
 {
-	if (rt_atoi("00123") == 123)
+	if (ft_atoi("   123") == 123)
 		return (0);
 	else
 		return (-1);
 }
-

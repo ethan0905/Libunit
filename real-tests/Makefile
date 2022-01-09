@@ -22,18 +22,18 @@ RM                              =       /bin/rm
 RMFLAGS                 +=      -rf
 
 SRCS                    =       main.c \
-								./rt_atoi/00_rt_atoi_launcher.c \
-								./rt_atoi/01_basic_atoi_test.c \
-								./rt_atoi/02_zero_test.c \
-								./rt_atoi/03_negative_test.c \
-								./rt_atoi/04_plus_sign_test.c \
-								./rt_atoi/05_space_test.c \
-								./rt_atoi/06_space_plus_test.c \
-								./rt_atoi/07_space_negative_test.c \
-								./rt_atoi/08_word_after_test.c \
-								./rt_atoi/09_zero_before_num_test.c \
-								./rt_atoi/10_zero_before_neg_num_test.c \
-								./rt_atoi/11_multiple_zero_test.c \
+								./ft_atoi/00_ft_atoi_launcher.c \
+								./ft_atoi/01_basic_atoi_test.c \
+								./ft_atoi/02_zero_test.c \
+								./ft_atoi/03_negative_test.c \
+								./ft_atoi/04_plus_sign_test.c \
+								./ft_atoi/05_space_test.c \
+								./ft_atoi/06_space_plus_test.c \
+								./ft_atoi/07_space_negative_test.c \
+								./ft_atoi/08_word_after_test.c \
+								./ft_atoi/09_zero_before_num_test.c \
+								./ft_atoi/10_zero_before_neg_num_test.c \
+								./ft_atoi/11_multiple_zero_test.c \
 
 
 SRCS                    +=      ../function_to_test/ft_atoi.c

@@ -19,7 +19,7 @@ static int	ft_issymbol(char c)
 	return (0);
 }
 
-int	rt_atoi(const char *str)
+int	ft_atoi(const char *str)
 {
 	int				i;
 	int				sign;

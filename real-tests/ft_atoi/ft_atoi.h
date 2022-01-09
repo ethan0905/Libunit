@@ -1,22 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rt_atoi.h                                          :+:      :+:    :+:   */
+/*   ft_atoi.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: esafar <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/09 13:54:45 by esafar            #+#    #+#             */
-/*   Updated: 2022/01/09 13:54:51 by esafar           ###   ########.fr       */
+/*   Updated: 2022/01/09 14:24:31 by esafar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef RT_ATOI_H
-# define RT_ATOI_H
+#ifndef FT_ATOI_H
+# define FT_ATOI_H
 
 # include "../../framework/libunit.h"
 
-int	rt_atoi(const char *str);
-int	rt_atoi_launcher(void);
+int	ft_atoi(const char *str);
+int	ft_atoi_launcher(void);
 int	basic_atoi_test(void);
 int	zero_test(void);
 int	negative_test(void);

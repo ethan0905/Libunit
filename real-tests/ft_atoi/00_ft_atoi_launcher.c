@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   00_rt_atoi_launcher.c                              :+:      :+:    :+:   */
+/*   00_ft_atoi_launcher.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: esafar <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/09 13:47:11 by esafar            #+#    #+#             */
-/*   Updated: 2022/01/09 13:47:16 by esafar           ###   ########.fr       */
+/*   Updated: 2022/01/09 14:23:38 by esafar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "rt_atoi.h"
+#include "ft_atoi.h"
 
-int	rt_atoi_launcher(void)
+int	ft_atoi_launcher(void)
 {
 	t_test	*lst;
 	int			ret;
