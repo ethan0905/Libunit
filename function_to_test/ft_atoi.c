@@ -1,31 +1,49 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: esafar <marvin@42.fr>                      +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/09 13:29:50 by esafar            #+#    #+#             */
-/*   Updated: 2022/01/09 13:29:51 by esafar           ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
+static int	ft_isspace(char c)
+{
+	if (c == ' ' || c == '\t' || c == '\v' || c == '\n' || c == '\f' || c == '\r')
+		return (1);
+	return (0);
+}
+
+static int	ft_isnumber(char c)
+{
+	if (c >= '0' && c <= '9')
+		return (1);
+	return (0);
+}
+
+static int	ft_issymbol(char c)
+{
+	if (c == '+' || c == '-')
+		return (1);
+	return (0);
+}
 
 int	rt_atoi(const char *str)
 {
-	int	neg;
-	int	num;
+	int				i;
+	int				sign;
+	unsigned int	res;
 
-	neg = 1;
-	num = 0;
-	if (*str == '-')
+	i = 0;
+	sign = 1;
+	res = 0;
+	while (ft_isspace(str[i]))
+		i++;
+	if (ft_issymbol(str[i]))
 	{
-		neg = -1;
-		str++;
+		if (str[i] == '-')
+			sign *= -1;
+		i++;
 	}
-	while (*str >= '0' && *str <= '9')
+	while (ft_isnumber(str[i]))
 	{
-		num = (num * 10) + (*str - '0');
-		str++;
+		res = res * 10 + (unsigned int)(str[i] - '0');
+		if (res > 2147483648 && sign < 0)
+			return (0);
+		else if (res > 2147483647 && sign > 0)
+			return (-1);
+		i++;
 	}
-	return (num * neg);
+	return ((unsigned)sign * res);
 }
